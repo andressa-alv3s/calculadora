@@ -24,13 +24,13 @@ export default function App() {
       case '-': 
         setCurrentNumber((fistNumber - lastNumber).toString())
         return
-      case 'x':
-        setCurrentNumber((fistNumber + lastNumber).toString())
+      case 'X':
+        setCurrentNumber((fistNumber * lastNumber).toString())
         return
       case '/': 
-        setCurrentNumber((fistNumber - lastNumber).toString())
+        setCurrentNumber((fistNumber / lastNumber).toString())
         return
-    }
+    }gt
   }
 
   function handleInput(buttonPressed){
@@ -41,7 +41,7 @@ export default function App() {
     }
     switch(buttonPressed){
       case 'DEL':
-        setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 2)))
+        setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 1)))
         return
       case 'LIMPAR': // Limpa todo o conteúdo
         setLastNumber("") 
